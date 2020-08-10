@@ -22,5 +22,58 @@ body, html{
 }
 
 .mainbar{
-    
+    border: 2px solid red;
+    min-height: 100vh;
 }
+
+.loginForm{
+    box-shadow: 0 15px 30px 0 rgba(0,0,0,0.3);
+}
+.loginForm:hover{
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+}
+
+.bg-1{
+    background-image: url("/images/Blue_Glitter_Background.jpg");
+}
+
+.marginLeft{
+    margin-left: 25%;
+}
+
+.fixed-top {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.fixed-left {
+  /* display: flex; */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+/* ////////////// person tem6 */
+.figimg{
+    width: 150px;
+    height: 150px;
+}
+.personimg{
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+}
+.personimg:hover{
+    box-shadow: 0 4px 30px 0 rgba(20,0,0,0.2), 0 4px 20px 0 rgba(20,0,0,0.19);
+}
+
+/* //////////////////////////////////////////// */
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 768px) {
+    .mainbar{
+        margin-left: 0;
+        margin-top: 48px;;
+    }
+  }
