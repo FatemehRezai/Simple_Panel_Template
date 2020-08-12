@@ -27,7 +27,7 @@
 
 <body>
     <!-- main -->
-    <div class="main d-flex px-0">
+    <div class="main d-flex px-0 bg-1">
         <!-- sidebar -->
         <div class="mysidebar d-none d-md-block col-md-3 bg-dark py-5 h-100 fixed-left">
             <ul class="list-group">
@@ -37,23 +37,38 @@
             </ul>
         </div>
         <!-- navbar -->
+         <!-- On screens that are less than 768px wide, make the sidebar into a topbar  -->
         <div class="mynavbar d-md-none d-block bg-dark fixed-top">
-            <ul class="list-group list-group-horizontal">
-                <li><a class="list-group-item list-group-item-action active py-1 my-0" href="index.html"><i class="fas fa-sign-in-alt"></i> Login page</a></li>
-                <li><a class="list-group-item list-group-item-action py-1 my-0" href="index-2.html"><i class="fas fa-user-alt"></i> Accounts list</a></li>
-                <li><a class="list-group-item list-group-item-action py-1 my-0" href="index-3.html"><i class="fas fa-chart-line"></i> Single profile</a></li>
-            </ul>
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                <!-- <a class="navbar-brand" href="#"></a> -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                  <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="index.html"><i class="fas fa-sign-in-alt"></i> Login page</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="index-2.html"><i class="fas fa-user-alt"></i> Accounts list</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="index-3.html"><i class="fas fa-chart-line"></i> Single profile</a>
+                    </li>    
+                  </ul>
+                </div>  
+            </nav>
         </div>
         <!-- mainbar -->
         <div class="mainbar col-md-9 col-12 d-flex flex-column justify-content-center align-items-center bg-1 marginLeft" id="mainbar">
             <!-- Login page -->
-            <div class="loginForm flex-column p-4 col-9 col-md-5 rounded">
+            <div class="loginForm flex-column p-4 col-9 col-md-5">
                 <form>
                     <div class="form-group">
-                      <input type="text" class="form-control" id="inputUsername" placeholder="Username">
+                      <input type="text" class="form-control" id="inputUsername" placeholder="&#xf007; Username" style="font-family: Arial, 'Font Awesome 5 Free'">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                      <input type="password" class="form-control" id="inputPassword" placeholder="&#xf084; Password" style="font-family: Arial, 'FontAwesome'">
                     </div>
                     <button type="submit" class="btn btn-primary my-2">LOGIN</button>
                 </form>

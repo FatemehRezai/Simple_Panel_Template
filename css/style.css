@@ -15,28 +15,24 @@ body, html{
 
 .main{
     height: 100%;
+    background-color: #f9f9f9;
 }
 
-.sidebar{
-    
+/* Navbar */
+.navbar-nav .nav-item{
+    margin: 3px 0;
+}
+.navbar-nav .nav-item.active .nav-link{
+    color: #ffffff;
+    background-color: #007bff; /* add background-color to active links */
+    border-radius: 5px;
+    padding-left: 8px;
 }
 
+/* Mainbar */
 .mainbar{
-    border: 2px solid red;
     min-height: 100vh;
 }
-
-.loginForm{
-    box-shadow: 0 15px 30px 0 rgba(0,0,0,0.3);
-}
-.loginForm:hover{
-    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-}
-
-.bg-1{
-    background-image: url("/images/Blue_Glitter_Background.jpg");
-}
-
 .marginLeft{
     margin-left: 25%;
 }
@@ -49,15 +45,21 @@ body, html{
     right: 0;
 }
 .fixed-left {
-  /* display: flex; */
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
 }
+/* Login page */
+.loginForm{
+    box-shadow: 0 15px 30px 0 rgba(0,0,0,0.3);
+    border-radius: 25px;
+}
+.loginForm:hover{
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+}
 
-
-/* ////////////// person tem6 */
+/* Accounts list */
 .figimg{
     width: 150px;
     height: 150px;
@@ -69,11 +71,92 @@ body, html{
     box-shadow: 0 4px 30px 0 rgba(20,0,0,0.2), 0 4px 20px 0 rgba(20,0,0,0.19);
 }
 
-/* //////////////////////////////////////////// */
-/* On screens that are less than 700px wide, make the sidebar into a topbar */
+.accountListItem:hover{
+    cursor: pointer;
+}
+
+ /* Card box */
+.cardBox{
+    position: relative;
+    color: #fff;
+    padding: 20px 10px 40px;
+    margin: 20px 0px;
+    border-radius: 6px;
+}
+.cardBox:hover{
+    text-decoration: none;
+    color: #f1f1f1;
+}
+.cardBox:hover .cardBoxIcon i{
+    font-size: 100px;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+.cardBoxText{
+    padding: 5px 10px 0 10px;
+}
+.cardBox h3{
+    font-size: 27px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+    white-space: nowrap;
+    padding: 0;
+    text-align: left;
+}
+.cardBox p{
+    font-size: 15px;
+}
+.cardBoxIcon{
+    position: absolute;
+    top: auto;
+    bottom: 5px;
+    right: 5px;
+    z-index: 0;
+    font-size: 72px;
+    color: rgba(0, 0, 0, 0.15);
+}
+.cardBoxFooter{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    text-align: center;
+    padding: 3px 0;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-decoration: none;
+}
+.cardBoxFooter:hover{
+    background: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+
+/* Background */
+.bg-blue{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(35,137,230,1) 0%, rgba(246,251,251,1) 90% );
+}
+.bg-green{
+    background-image: radial-gradient( circle 266px at 12% 29.3%,  rgba(58,219,154,0.93) 2%, rgba(153,228,208,1) 38.6%, rgba(142,246,219,0.82) 73.9%, rgba(253,255,238,1) 100.7% );
+}
+.bg-orange{
+    background-image: radial-gradient( circle farthest-corner at 24.7% 28.8%,  rgba(247,183,29,1) 1.9%, rgba(253,239,150,1) 97.7% );
+}
+.bg-red{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(224,61,61,1) 0%, rgba(253,253,253,1) 90% );
+}
+
+.bg-1{
+    background-image: radial-gradient( circle farthest-corner at 1.5% 1.4%,  rgba(159,227,255,1) 0%, rgba(255,177,219,1) 100.2% );
+}
+
+/* On screens that are less than 768px wide */
 @media screen and (max-width: 768px) {
     .mainbar{
         margin-left: 0;
         margin-top: 48px;;
+    }
+    .singleProfileInfo{
+        flex-basis: 40%;
     }
   }
